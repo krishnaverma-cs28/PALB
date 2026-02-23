@@ -1,0 +1,8 @@
+class Solution:
+    def trappingWater(self, arr):
+        water = 0
+        for i in range(1, len(arr) - 1):
+            left = max(arr[:i+1])
+            right = max(arr[i:])
+            water += min(left, right) - arr[i]
+        return water
