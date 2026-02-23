@@ -1,0 +1,6 @@
+class Solution:
+    def mergeArrays(self, a, b):
+        for i in range(len(a)):
+            if a[i] > b[0]:
+                a[i], b[0] = b[0], a[i]
+                b.sort()
