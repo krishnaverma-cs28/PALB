@@ -1,0 +1,13 @@
+class Solution:
+    def median(self, mat):
+        arr = []
+
+        # put all elements into one list
+        for row in mat:
+            for num in row:
+                arr.append(num)
+
+        arr.sort()  # sort all numbers
+
+        mid = len(arr) // 2
+        return arr[mid]
